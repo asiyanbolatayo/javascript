@@ -84,7 +84,7 @@ class Student extends User {
 
 
 // Create some students
-const student1 = new Student("Obinna", "chikeobinna@mail.com", "mysimplepassword", 123, 1, ["English", "Mathematics"]);
+const student1 = new Student("Obinna", "", "chikeobinna@mail.com", "mysimplepassword", 123, 1, ["English", "Mathematics"]);
 const student2 = new Student("Johnson", "Olamide", "jola@gmail.com", "somepassword12", 456, 2, ["English", "Science"]);
 
 
@@ -100,6 +100,10 @@ console.log(student2.getStudentNumber());
 
 console.log(student1.getStudentClass());
 console.log(student2.getStudentClass());
+console.log(student1.getSubjects());
+console.log(student2.getSubjects());
 
-// console.log(student1.getSubjects());
-// console.log(student2.getSubjects());
+student1.addNewSubject("History");
+console.log(student1.getSubjects());
+student2.addNewSubject("Physics");
+console.log(student2.getSubjects());

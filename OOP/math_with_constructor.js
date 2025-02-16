@@ -2,7 +2,7 @@
 //A class with constructor
 class MathHelper {
 
-    constructor(num1, num2) {
+    constructor(num1, num2, instanceName) {
         //Code in constructoe always runs before creating the instance
         // check if num1 and num2 are numbers
         if (typeof num1 !== 'number' || typeof num2 !== 'number') {
@@ -11,6 +11,7 @@ class MathHelper {
 
         this.num1 = num1; //this => Reference to the instance
         this.num2 = num2;
+        this.instanceName = `This instance is: ${instanceName}`
     }
 
     add() {
@@ -39,7 +40,8 @@ class MathHelper {
 }
 
 // Create an instance from the class
-const mathHelper1 = new MathHelper(20, 10);
+const mathHelper1 = new MathHelper(20, 10, "Math 1 instance" );
+console.log(mathHelper1.instanceName)
 
 //use the instance
 console.log(mathHelper1.add());
@@ -61,5 +63,6 @@ console.log(mathHelper2.modulo());
 console.log(mathHelper2.power());
 
 // Try to create an instance from the class with wrong arguments
-const mathHelper3 = new MathHelper(10, 'girl');
-mathHelper3.add()
+const mathHelper3 = new MathHelper(5, 10);
+let Addtion = mathHelper3.add()
+console.log(Addtion)

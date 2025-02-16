@@ -61,7 +61,7 @@ console.log(user4.getFullName());
 
 // Set some properties
 user1.setPassword("newPassword");
-user2.setEmail("mynewemail@mail.com");
+user2.setEmail("asiyanbolamuhammed.mb@gmail.com");
 
 console.log(user1.getPassword());
 console.log(user2.getEmail());
